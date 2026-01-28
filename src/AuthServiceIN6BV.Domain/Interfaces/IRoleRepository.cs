@@ -7,7 +7,7 @@ namespace AuthServiceIN6BV.Domain.Interfaces
 public interface IRoleRepository
 {
     Task<Role> GetByNameAsync(string name);
-    Task<int> CCountUsersInRoleAsync(string roleName);
+    Task<int> CountUsersInRoleAsync(string roleName);
     Task<IReadOnlyList<User>> GetUserByRoleAsync(string roleName);
     Task<IReadOnlyList<string>> GetUserRolesAsync(string userId);
     
