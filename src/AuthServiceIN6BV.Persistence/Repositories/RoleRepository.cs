@@ -2,17 +2,16 @@ using AuthServiceIN6BV.Domain.Entities;
 using AuthServiceIN6BV.Domain.Interfaces;
 using AuthServiceIN6BV.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
-
+ 
 namespace AuthServiceIN6BV.Persistence.Repositories;
-
+ 
 public class RoleRepository(ApplicationDbContext context) : IRoleRepository
 {
     public async Task<Role?> GetByNameAsync(string roleName)
     {
-        return await context.Roles
-            .FirstOrDefaultAsync(r => r.Name == roleName);
+        return await context.Roles.FirstOrDefaultAsync(r => r.Name == roleName);
     }
-
+ 
     public async Task<int> CountUsersInRoleAsync(string roleName)
     {
         return await context.UserRoles
@@ -22,11 +21,11 @@ public class RoleRepository(ApplicationDbContext context) : IRoleRepository
             .Distinct()
             .CountAsync();
     }
-
-    public async Task<IReadOnlyList<User>> GetUserByRoleAsync(string roleName)
+ 
+    public async Task<IReadOnlyList<User>> GetUsersByRoleAsync(string roleName)
     {
         var users = await context.Users
-            .Include(up => up.UserProfile)
+            .Include(u => u.UserProfile)
             .Include(u => u.UserEmail)
             .Include(u => u.UserRoles)
                 .ThenInclude(ur => ur.Role)
@@ -34,7 +33,8 @@ public class RoleRepository(ApplicationDbContext context) : IRoleRepository
             .ToListAsync();
         return users;
     }
-    public async Task<IReadOnlyList<string>> GetUserRolesAsync(string userId)
+ 
+    public async Task<IReadOnlyList<string>> GetUserRoleNameAsync(string userId)
     {
         var roles = await context.UserRoles
             .Include(ur => ur.Role)
@@ -43,5 +43,4 @@ public class RoleRepository(ApplicationDbContext context) : IRoleRepository
             .ToListAsync();
         return roles;
     }
-
 }
