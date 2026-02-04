@@ -8,7 +8,7 @@ public static class FileValidator
 
     private const int MaxFileSizeInBytes = 5 * 1024 * 1024;
 
-    public static (bool IsValid, string? ErrorMessage) validateImage(IFileData file)
+    public static (bool IsValid, string? ErrorMessage) ValidateImage(IFileData file)
     {
         if (file == null || file.Size == 0)
         {

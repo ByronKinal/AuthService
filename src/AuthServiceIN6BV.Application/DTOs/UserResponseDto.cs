@@ -12,6 +12,7 @@ public class UserResponseDto
     public string Phone { get; set; } = string.Empty;
     public string Role { get; set; } = string.Empty;
     public bool Status { get; set; }
+    public bool IsEmailVerified { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
 }

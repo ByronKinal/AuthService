@@ -7,7 +7,7 @@ using System.Security.Claims;
 using System.Text;
 namespace AuthServiceIN6BV.Application.Services;
 
-public class JwtTokenService(IConfiguration configuration) : IJwtTokenService
+public class JwtTokenService(IConfiguration configuration) : IJwtService
 {
     public string GenerateToken(User user)
     {

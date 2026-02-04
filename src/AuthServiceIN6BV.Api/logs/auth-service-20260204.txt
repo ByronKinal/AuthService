@@ -1,0 +1,47 @@
+[2026-02-04 16:08:25 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-04 16:08:25 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-04 16:09:07 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-04 16:09:08 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-04 16:09:43 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-04 16:09:44 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-04 16:10:23 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-04 16:10:23 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-04 16:11:59 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-04 16:12:00 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-04 16:23:23 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-04 16:23:24 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-04 16:23:42 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-04 16:23:42 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-04 16:23:43 INF] Database initialization completed successfully {"SourceContext":"Program"}
+[2026-02-04 16:23:43 INF] AuthService API is running at http://localhost:5102. Health endpoint: http://localhost:5102/health {"SourceContext":"Program"}
+[2026-02-04 16:23:50 WRN] Failed to determine the https port for redirect. {"EventId":{"Id":3,"Name":"FailedToDeterminePort"},"SourceContext":"Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware","RequestId":"0HNJ47G94FNET:00000001","RequestPath":"/health","ConnectionId":"0HNJ47G94FNET"}
+[2026-02-04 16:23:50 INF] HTTP GET /health responded 200 in 75.2468 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNET:00000001","ConnectionId":"0HNJ47G94FNET"}
+[2026-02-04 16:23:50 INF] HTTP GET /favicon.ico responded 404 in 0.5789 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNET:00000002","ConnectionId":"0HNJ47G94FNET"}
+[2026-02-04 16:38:47 INF] HTTP GET /api/v1/Auth/profile responded 401 in 3.9234 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF3:00000001","ConnectionId":"0HNJ47G94FNF3"}
+[2026-02-04 16:39:08 INF] HTTP GET /api/v1/Users responded 404 in 0.0980 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF3:00000002","ConnectionId":"0HNJ47G94FNF3"}
+[2026-02-04 16:39:10 INF] HTTP GET /api/v1/Users responded 404 in 0.0665 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF3:00000003","ConnectionId":"0HNJ47G94FNF3"}
+[2026-02-04 16:39:53 INF] HTTP GET /api/v1/Users/by-role/USER_ROLE responded 401 in 6.2915 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF3:00000004","ConnectionId":"0HNJ47G94FNF3"}
+[2026-02-04 16:39:54 INF] HTTP GET /api/v1/Users/by-role/USER_ROLE responded 401 in 1.0954 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF3:00000005","ConnectionId":"0HNJ47G94FNF3"}
+[2026-02-04 16:40:03 INF] HTTP GET /api/v1/Users/by-role/USER_ROLE responded 401 in 0.3143 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF3:00000006","ConnectionId":"0HNJ47G94FNF3"}
+[2026-02-04 16:40:04 INF] HTTP GET /api/v1/Users/by-role/USER_ROLE responded 401 in 0.1940 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF3:00000007","ConnectionId":"0HNJ47G94FNF3"}
+[2026-02-04 16:40:05 INF] HTTP GET /api/v1/Users/by-role/USER_ROLE responded 401 in 0.2052 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF3:00000008","ConnectionId":"0HNJ47G94FNF3"}
+[2026-02-04 16:43:27 INF] HTTP GET /api/v1/Health responded 200 in 8.4790 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF5:00000001","ConnectionId":"0HNJ47G94FNF5"}
+[2026-02-04 16:46:17 INF] HTTP GET /api/v1/profile responded 404 in 0.1520 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000001","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:18 INF] HTTP GET /api/v1/profile responded 404 in 0.0644 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000002","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:19 INF] HTTP GET /api/v1/profile responded 404 in 0.0652 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000003","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:23 INF] HTTP GET /api/v1/profile responded 404 in 0.2266 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000004","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:24 INF] HTTP GET /api/v1/profile responded 404 in 0.1531 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000005","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:24 INF] HTTP GET /api/v1/profile responded 404 in 0.1300 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000006","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:32 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.2444 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000007","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:33 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.1498 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000008","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:34 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.2461 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000009","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:35 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.1380 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:0000000A","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:35 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.3930 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:0000000B","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:36 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.1769 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:0000000C","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:46:49 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.2408 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF8:00000001","ConnectionId":"0HNJ47G94FNF8"}
+[2026-02-04 16:47:00 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.1417 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:0000000D","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:47:00 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.1260 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:0000000E","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:47:06 INF] HTTP GET /api/v1/Auth/profile
+ responded 404 in 0.1071 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:0000000F","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:47:07 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.1614 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000010","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 16:47:08 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.2362 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000011","ConnectionId":"0HNJ47G94FNF7"}
