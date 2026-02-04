@@ -45,3 +45,66 @@
  responded 404 in 0.1071 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:0000000F","ConnectionId":"0HNJ47G94FNF7"}
 [2026-02-04 16:47:07 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.1614 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000010","ConnectionId":"0HNJ47G94FNF7"}
 [2026-02-04 16:47:08 INF] HTTP GET /api/v1/Auth/profile responded 401 in 0.2362 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ47G94FNF7:00000011","ConnectionId":"0HNJ47G94FNF7"}
+[2026-02-04 17:05:03 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-04 17:05:04 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-04 17:05:04 INF] Database initialization completed successfully {"SourceContext":"Program"}
+[2026-02-04 17:05:04 INF] AuthService API is running at http://localhost:5102. Health endpoint: http://localhost:5102/health {"SourceContext":"Program"}
+[2026-02-04 17:05:07 WRN] Failed to determine the https port for redirect. {"EventId":{"Id":3,"Name":"FailedToDeterminePort"},"SourceContext":"Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware","RequestId":"0HNJ487BI6U9B:00000001","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNJ487BI6U9B"}
+[2026-02-04 17:05:07 INF] HTTP POST /api/v1/auth/register responded 400 in 80.9100 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ487BI6U9B:00000001","ConnectionId":"0HNJ487BI6U9B"}
+[2026-02-04 17:05:21 INF] User adasdasd registered successfully. {"EventId":{"Id":1001,"Name":"LogUserRegistered"},"SourceContext":"AuthServiceIN6BV.Application.Services.AuthService","ActionId":"bc166009-e19b-45bf-b5df-0cbb456fd49e","ActionName":"AuthServiceIN6BV.Api.Controllers.AuthController.Register (AuthServiceIN6BV.Api)","RequestId":"0HNJ487BI6U9B:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNJ487BI6U9B"}
+[2026-02-04 17:05:21 INF] HTTP POST /api/v1/auth/register responded 201 in 315.2702 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ487BI6U9B:00000002","ConnectionId":"0HNJ487BI6U9B"}
+[2026-02-04 17:05:21 ERR] Failed to send email {"SourceContext":"AuthServiceIN6BV.Application.Services.EmailService","ActionId":"bc166009-e19b-45bf-b5df-0cbb456fd49e","ActionName":"AuthServiceIN6BV.Api.Controllers.AuthController.Register (AuthServiceIN6BV.Api)","RequestId":"0HNJ487BI6U9B:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNJ487BI6U9B"}
+MailKit.Security.SslHandshakeException: An error occurred while attempting to establish an SSL or TLS connection.
+
+The server's SSL certificate could not be validated for the following reasons:
+• The server certificate has the following errors:
+  • La función de revocación no puede comprobar la revocación para el certificado.
+
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate was rejected by the provided RemoteCertificateValidationCallback.
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.SslHandshakeAsync(SslStream ssl, String host, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthServiceIN6BV.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\2024427\AuthService 1\AuthService\src\AuthServiceIN6BV.Application\Services\EmailService.cs:line 114
+[2026-02-04 17:05:21 ERR] Failed to send email {"SourceContext":"AuthServiceIN6BV.Application.Services.EmailService","ActionId":"bc166009-e19b-45bf-b5df-0cbb456fd49e","ActionName":"AuthServiceIN6BV.Api.Controllers.AuthController.Register (AuthServiceIN6BV.Api)","RequestId":"0HNJ487BI6U9B:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNJ487BI6U9B"}
+MailKit.Security.SslHandshakeException: An error occurred while attempting to establish an SSL or TLS connection.
+
+The server's SSL certificate could not be validated for the following reasons:
+• The server certificate has the following errors:
+  • La función de revocación no puede comprobar la revocación para el certificado.
+
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate was rejected by the provided RemoteCertificateValidationCallback.
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.SslHandshakeAsync(SslStream ssl, String host, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthServiceIN6BV.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\2024427\AuthService 1\AuthService\src\AuthServiceIN6BV.Application\Services\EmailService.cs:line 114
+[2026-02-04 17:05:21 ERR] Failed to send verification email {"SourceContext":"AuthServiceIN6BV.Application.Services.AuthService","ActionId":"bc166009-e19b-45bf-b5df-0cbb456fd49e","ActionName":"AuthServiceIN6BV.Api.Controllers.AuthController.Register (AuthServiceIN6BV.Api)","RequestId":"0HNJ487BI6U9B:00000002","RequestPath":"/api/v1/auth/register","ConnectionId":"0HNJ487BI6U9B"}
+System.InvalidOperationException: Failed to send email: An error occurred while attempting to establish an SSL or TLS connection.
+
+The server's SSL certificate could not be validated for the following reasons:
+• The server certificate has the following errors:
+  • La función de revocación no puede comprobar la revocación para el certificado.
+
+ ---> MailKit.Security.SslHandshakeException: An error occurred while attempting to establish an SSL or TLS connection.
+
+The server's SSL certificate could not be validated for the following reasons:
+• The server certificate has the following errors:
+  • La función de revocación no puede comprobar la revocación para el certificado.
+
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate was rejected by the provided RemoteCertificateValidationCallback.
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.SslHandshakeAsync(SslStream ssl, String host, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at AuthServiceIN6BV.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\2024427\AuthService 1\AuthService\src\AuthServiceIN6BV.Application\Services\EmailService.cs:line 114
+   --- End of inner exception stack trace ---
+   at AuthServiceIN6BV.Application.Services.EmailService.SendEmailAsync(String to, String subject, String body) in C:\2024427\AuthService 1\AuthService\src\AuthServiceIN6BV.Application\Services\EmailService.cs:line 166
+   at AuthServiceIN6BV.Application.Services.EmailService.SendEmailVerificationAsync(String email, String username, String token) in C:\2024427\AuthService 1\AuthService\src\AuthServiceIN6BV.Application\Services\EmailService.cs:line 29
+   at AuthServiceIN6BV.Application.Services.AuthService.<>c__DisplayClass9_0.<<RegisterAsync>b__0>d.MoveNext() in C:\2024427\AuthService 1\AuthService\src\AuthServiceIN6BV.Application\Services\AuthService.cs:line 131
